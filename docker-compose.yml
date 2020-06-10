@@ -1,0 +1,19 @@
+version: '3'
+volumes:
+  node_modules:
+services:
+  prod-apache:
+    image: httpd:alpine
+    volumes:
+        - ./app/public:/usr/local/apache2/htdocs
+    ports:
+      - "8080:80"
+  dev:
+    build: .
+    tty: true
+    restart: always
+    volumes:
+      - ./app:/app
+      - node_modules:/app/node_modules
+    ports:
+      - "3000:8000"

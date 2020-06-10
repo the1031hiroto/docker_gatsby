@@ -1,0 +1,17 @@
+# Logs
+logs
+*.log
+
+# Dependency directories
+app/node_modules/
+
+# dotenv environment variable files
+.env*
+
+# gatsby files
+app/.cache/
+
+# Mac files
+.DS_Store
+
+.history
