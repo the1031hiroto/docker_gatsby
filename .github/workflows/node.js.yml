@@ -11,6 +11,7 @@ on:
 
 jobs:
   build:
+    working-directory: ./app
 
     runs-on: ubuntu-latest
 
