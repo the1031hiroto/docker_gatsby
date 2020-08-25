@@ -26,7 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
       working-directory: ./app
-    - run: npm run build --if-present
+    - run: gatsby develop
       working-directory: ./app
     - run: npm test
       working-directory: ./app
